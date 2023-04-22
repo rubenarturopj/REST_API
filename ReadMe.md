@@ -8,7 +8,11 @@ Features:
 -   Middlewares creation
 -   Cookie based authentication
 -   Postman testing
--   Create, Read, Update
+-   Create, Read, Update, Delete
+
+### Technologies used
+
+Express, http, bodyparser, cookieParser, compression, cors, mongoose, mongoDB(cloud), lodash, crypto (from node.js).
 
 #### To install all packages
 
@@ -41,22 +45,18 @@ _npm start_
 
 1. Express. In the index.ts add the imports and set the structure of the server:
 
-import express from "express";
-import http from "http";
-import bodyParser from "body-parser";
-import cookieParser from "cookie-parser";
-import compression from "compression";
-import cors from "cors";
-
-const app = express();
-
-app.use(cors({credentials: true}));
-
-app.use(compression());
-app.use(cookieParser());
-app.use(bodyParser.json());
-
-const server = http.createServer(app);
+-   import express from "express";
+-   import http from "http";
+-   import bodyParser from "body-parser";
+-   import cookieParser from "cookie-parser";
+-   import compression from "compression";
+-   import cors from "cors";
+-   const app = express();
+-   app.use(cors({credentials: true}));
+-   app.use(compression());
+-   app.use(cookieParser());
+-   app.use(bodyParser.json());
+-   const server = http.createServer(app);
 
 2. Install all the imports previously set. In the terminal, run _npm i express body-parser cookie-parser compression cors_.
 
@@ -138,10 +138,6 @@ const server = http.createServer(app);
 19. Now let,s create the last controller, the update user info controller. go to src/controllers/users.ts and create the function updateUser. Once that done, go to src/router/users.ts to implement it, dont forget to import it.
 
 20. Try with Nodemon. It's done.
-
-### Technologies used
-
-Express, http, bodyparser, cookieParser, compression, cors, mongoose, mongoDB(cloud), lodash, crypto (from node.js).
 
 ### Credits:
 
